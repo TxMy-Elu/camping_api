@@ -13,6 +13,7 @@ public class Compte {
 
     /**
      * Constructeur de la classe Compte
+     *
      * @param id_compte
      * @param username
      * @param email
@@ -30,7 +31,6 @@ public class Compte {
     }
 
     /**
-     *
      * @return id_compte
      */
     public int getId_compte() {
@@ -38,7 +38,6 @@ public class Compte {
     }
 
     /**
-     *
      * @param id_compte
      */
     public void setId_compte(int id_compte) {
@@ -46,7 +45,6 @@ public class Compte {
     }
 
     /**
-     *
      * @return username
      */
     public String getUsername() {
@@ -54,7 +52,6 @@ public class Compte {
     }
 
     /**
-     *
      * @param username
      */
     public void setUsername(String username) {
@@ -62,7 +59,6 @@ public class Compte {
     }
 
     /**
-     *
      * @return email
      */
     public String getEmail() {
@@ -70,7 +66,6 @@ public class Compte {
     }
 
     /**
-     *
      * @param email
      */
     public void setEmail(String email) {
@@ -78,7 +73,6 @@ public class Compte {
     }
 
     /**
-     *
      * @return password
      */
     public String getPassword() {
@@ -86,7 +80,6 @@ public class Compte {
     }
 
     /**
-     *
      * @param password
      */
     public void setPassword(String password) {
@@ -94,7 +87,6 @@ public class Compte {
     }
 
     /**
-     *
      * @return role
      */
     public String getRole() {
@@ -102,7 +94,6 @@ public class Compte {
     }
 
     /**
-     *
      * @param role
      */
     public void setRole(String role) {
@@ -110,7 +101,6 @@ public class Compte {
     }
 
     /**
-     *
      * @return abscences
      */
     public int getAbscences() {
@@ -118,7 +108,6 @@ public class Compte {
     }
 
     /**
-     *
      * @param abscences
      */
     public void setAbscences(int abscences) {
@@ -126,19 +115,11 @@ public class Compte {
     }
 
     /**
-     *
      * @return String
      */
     @Override
     public String toString() {
-        return "Compte{" +
-                "id_compte=" + id_compte +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
-                ", abscences=" + abscences +
-                '}';
+        return "Compte{" + "id_compte=" + id_compte + ", username='" + username + '\'' + ", email='" + email + '\'' + ", password='" + password + '\'' + ", role='" + role + '\'' + ", abscences=" + abscences + '}';
     }
 
 

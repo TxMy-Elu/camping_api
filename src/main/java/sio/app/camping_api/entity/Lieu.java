@@ -5,7 +5,6 @@ public class Lieu {
     private int libelle;
 
     /**
-     *
      * @param id_lieu
      * @param libelle
      */
@@ -15,7 +14,6 @@ public class Lieu {
     }
 
     /**
-     *
      * @return id_lieu
      */
 
@@ -24,7 +22,6 @@ public class Lieu {
     }
 
     /**
-     *
      * @param id_lieu
      */
 
@@ -33,7 +30,6 @@ public class Lieu {
     }
 
     /**
-     *
      * @return libelle
      */
     public int getLibelle() {
@@ -41,7 +37,6 @@ public class Lieu {
     }
 
     /**
-     *
      * @param libelle
      */
     public void setLibelle(int libelle) {
@@ -49,7 +44,6 @@ public class Lieu {
     }
 
     /**
-     *
      * @return
      */
     @Override

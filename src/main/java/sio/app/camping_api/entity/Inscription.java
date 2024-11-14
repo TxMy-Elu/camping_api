@@ -10,7 +10,6 @@ public class Inscription {
     private int liste_attente;
 
     /**
-     *
      * @param id
      * @param id_compte
      * @param id_crenaux
@@ -27,7 +26,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @return id
      */
     public int getId() {
@@ -35,7 +33,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @param id
      */
     public void setId(int id) {
@@ -43,7 +40,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @return id_compte
      */
     public int getId_compte() {
@@ -51,7 +47,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @param id_compte
      */
     public void setId_compte(int id_compte) {
@@ -59,7 +54,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @return id_crenaux
      */
     public int getId_crenaux() {
@@ -67,7 +61,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @param id_crenaux
      */
     public void setId_crenaux(int id_crenaux) {
@@ -75,7 +68,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @return date_inscription
      */
     public DateTimeFormat getDate_inscription() {
@@ -83,7 +75,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @param date_inscription
      */
     public void setDate_inscription(DateTimeFormat date_inscription) {
@@ -91,7 +82,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @return liste_attente
      */
     public int getListe_attente() {
@@ -99,7 +89,6 @@ public class Inscription {
     }
 
     /**
-     *
      * @param liste_attente
      */
     public void setListe_attente(int liste_attente) {
@@ -111,13 +100,7 @@ public class Inscription {
      */
     @Override
     public String toString() {
-        return "Inscription{" +
-                "id=" + id +
-                ", id_compte=" + id_compte +
-                ", id_crenaux=" + id_crenaux +
-                ", date_inscription=" + date_inscription +
-                ", liste_attente=" + liste_attente +
-                '}';
+        return "Inscription{" + "id=" + id + ", id_compte=" + id_compte + ", id_crenaux=" + id_crenaux + ", date_inscription=" + date_inscription + ", liste_attente=" + liste_attente + '}';
     }
 }
 

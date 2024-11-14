@@ -1,9 +1,6 @@
 package sio.app.camping_api.entity;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.util.Calendar;
-import java.util.Date;
 
 public class Creneaux {
 
@@ -34,7 +31,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @return id_creneaux
      */
     public int getId_creneaux() {
@@ -42,7 +38,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @param id_creneaux
      */
     public void setId_creneaux(int id_creneaux) {
@@ -50,7 +45,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @return date_heure
      */
     public Calendar getDate_heure() {
@@ -58,7 +52,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @param date_heure
      */
     public void setDate_heure(Calendar date_heure) {
@@ -66,7 +59,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @return id
      */
     public int getId() {
@@ -74,7 +66,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @param id
      */
     public void setId(int id) {
@@ -82,7 +73,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @return duree
      */
     public int getDuree() {
@@ -90,7 +80,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @param duree
      */
     public void setDuree(int duree) {
@@ -98,7 +87,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @return places_totales
      */
     public int getPlaces_totales() {
@@ -106,7 +94,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @param places_totales
      */
     public void setPlaces_totales(int places_totales) {
@@ -114,7 +101,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @return places_prises
      */
     public int getPlaces_prises() {
@@ -122,7 +108,6 @@ public class Creneaux {
     }
 
     /**
-     *
      * @param places_prises
      */
     public void setPlaces_prises(int places_prises) {
@@ -130,19 +115,11 @@ public class Creneaux {
     }
 
     /**
-     *
      * @return String
      */
     @Override
     public String toString() {
-        return "Creneaux{" +
-                "id_creneaux=" + id_creneaux +
-                ", date_heure=" + date_heure +
-                ", id=" + id +
-                ", duree=" + duree +
-                ", places_totales=" + places_totales +
-                ", places_prises=" + places_prises +
-                '}';
+        return "Creneaux{" + "id_creneaux=" + id_creneaux + ", date_heure=" + date_heure + ", id=" + id + ", duree=" + duree + ", places_totales=" + places_totales + ", places_prises=" + places_prises + '}';
     }
 
 
