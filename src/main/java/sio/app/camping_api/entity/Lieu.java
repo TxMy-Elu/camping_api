@@ -5,7 +5,7 @@ public class Lieu {
     private int libelle;
 
     /**
-     *
+     *Constructeur de la classe Lieu
      * @param id_lieu
      * @param libelle
      */
@@ -50,7 +50,7 @@ public class Lieu {
 
     /**
      *
-     * @return
+     * @return String
      */
     @Override
     public String toString() {

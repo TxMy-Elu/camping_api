@@ -10,7 +10,7 @@ public class Inscription {
     private int liste_attente;
 
     /**
-     *
+     *Constructeur de la classe Inscription
      * @param id
      * @param id_compte
      * @param id_crenaux
