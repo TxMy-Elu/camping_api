@@ -19,7 +19,7 @@ public class InscriptionService {
         private String databasePassword;
 
        public int nb;
-        public List<Map<String, Object>> UpdateNbPlace( int id_global) {
+        public List<Map<String, Object>> UpdateNbPlace() {
             List<Map<String, Object>> inscriptionList = new ArrayList<>();
             String query = "UPDATE creneaux\n"
                     + "SET places_prises = places_prises+nb"
@@ -30,8 +30,7 @@ public class InscriptionService {
                     incription.put("places_prises", rs.getInt("places_prises"));
 
                     incription.put("nb", rs.getInt(nb));
-                    incription.put("id_global", rs.getInt(id_global));
-
+                    incription.put("id_global", rs.getInt());
 
                     inscriptionList.add(incription);
                 }

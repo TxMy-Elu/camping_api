@@ -16,10 +16,15 @@ public class InscriptionController {
     public InscriptionController(InscriptionService inscriptionService) {
         this.inscriptionService = inscriptionService;
     }
-
-    @GetMapping("/UpdateNbPlace/{id_global}")
-        public List<Map<String, Object>> getAllSystemMetrics(@PathVariable int id_global) {
-            return inscriptionService.UpdateNbPlace(id_global);
+    public String processRequest(@Creneaux Creneaux creneaux) {
+        Long id = creneaux.getId();
+        Integer nb = creneaux.getNb();
+        // Traitez les valeurs ici
+        creneauxService.update(id , nb);
+    }
+    @GetMapping("/UpdateNbPlace")
+        public List<Map<String, Object>> getAllSystemMetrics() {
+            return inscriptionService.UpdateNbPlace();
 
         }
     }
