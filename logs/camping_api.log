@@ -1,0 +1,360 @@
+2024-11-28T18:56:31.639+01:00  INFO 8964 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 8964 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T18:56:31.639+01:00  INFO 8964 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T18:56:31.772+01:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T18:56:31.774+01:00  INFO 8964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-11-28T18:56:31.873+01:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T18:56:31.873+01:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T18:56:31.874+01:00  INFO 8964 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T18:56:31.885+01:00  INFO 8964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T18:56:31.885+01:00  INFO 8964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 244 ms
+2024-11-28T18:56:31.910+01:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-28T18:56:31.928+01:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7adbc383
+2024-11-28T18:56:31.929+01:00  INFO 8964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-28T18:56:31.930+01:00  INFO 8964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T18:56:31.932+01:00  INFO 8964 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T18:56:31.939+01:00  INFO 8964 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T18:56:31.957+01:00  INFO 8964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T18:56:31.958+01:00  INFO 8964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T18:56:31.978+01:00  WARN 8964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T18:56:32.063+01:00  INFO 8964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T18:56:32.093+01:00  INFO 8964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T18:56:32.096+01:00  INFO 8964 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 0.495 seconds (process running for 106.783)
+2024-11-28T18:56:32.098+01:00  INFO 8964 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-28T18:56:36.490+01:00  INFO 11052 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 11052 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T18:56:36.493+01:00  INFO 11052 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T18:56:36.547+01:00  INFO 11052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T18:56:36.547+01:00  INFO 11052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T18:56:37.134+01:00  INFO 11052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T18:56:37.152+01:00  INFO 11052 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2024-11-28T18:56:37.575+01:00  INFO 11052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T18:56:37.587+01:00  INFO 11052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T18:56:37.587+01:00  INFO 11052 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T18:56:37.670+01:00  INFO 11052 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T18:56:37.670+01:00  INFO 11052 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1122 ms
+2024-11-28T18:56:37.773+01:00  INFO 11052 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T18:56:38.133+01:00  INFO 11052 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40d7d9e1
+2024-11-28T18:56:38.135+01:00  INFO 11052 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T18:56:38.175+01:00  INFO 11052 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T18:56:38.223+01:00  INFO 11052 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T18:56:38.253+01:00  INFO 11052 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T18:56:38.538+01:00  INFO 11052 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T18:56:38.913+01:00  INFO 11052 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T18:56:38.917+01:00  INFO 11052 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T18:56:38.973+01:00  WARN 11052 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T18:56:39.293+01:00  INFO 11052 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T18:56:39.324+01:00  INFO 11052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T18:56:39.330+01:00  INFO 11052 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 3.228 seconds (process running for 3.858)
+2024-11-28T18:56:51.111+01:00  INFO 11052 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T18:56:51.111+01:00  INFO 11052 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T18:56:51.112+01:00  INFO 11052 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-28T18:56:51.250+01:00  WARN 11052 --- [http-nio-8080-exec-2] s.a.c.services.InscriptionService        : No creneaux found with id_creneaux: 0
+2024-11-28T18:58:37.728+01:00  INFO 9248 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 9248 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T18:58:37.731+01:00  INFO 9248 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T18:58:37.789+01:00  INFO 9248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T18:58:37.789+01:00  INFO 9248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T18:58:38.376+01:00  INFO 9248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T18:58:38.396+01:00  INFO 9248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2024-11-28T18:58:38.856+01:00  INFO 9248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T18:58:38.868+01:00  INFO 9248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T18:58:38.869+01:00  INFO 9248 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T18:58:38.945+01:00  INFO 9248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T18:58:38.945+01:00  INFO 9248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1155 ms
+2024-11-28T18:58:39.054+01:00  INFO 9248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T18:58:39.397+01:00  INFO 9248 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17e069e3
+2024-11-28T18:58:39.399+01:00  INFO 9248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T18:58:39.440+01:00  INFO 9248 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T18:58:39.486+01:00  INFO 9248 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T18:58:39.518+01:00  INFO 9248 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T18:58:39.801+01:00  INFO 9248 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T18:58:40.174+01:00  INFO 9248 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T18:58:40.180+01:00  INFO 9248 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T18:58:40.240+01:00  WARN 9248 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T18:58:40.556+01:00  INFO 9248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T18:58:40.587+01:00  INFO 9248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T18:58:40.594+01:00  INFO 9248 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 3.283 seconds (process running for 3.908)
+2024-11-28T18:58:45.305+01:00  INFO 9248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T18:58:45.305+01:00  INFO 9248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T18:58:45.307+01:00  INFO 9248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-11-28T18:58:45.473+01:00  WARN 9248 --- [http-nio-8080-exec-1] s.a.c.services.InscriptionService        : No creneaux found with id_creneaux: 0
+2024-11-28T18:59:13.039+01:00  INFO 9248 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-28T18:59:13.051+01:00  INFO 9248 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T18:59:13.057+01:00  INFO 9248 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-28T18:59:13.063+01:00  INFO 9248 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-28T18:59:13.124+01:00  INFO 9248 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 9248 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T18:59:13.125+01:00  INFO 9248 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T18:59:13.279+01:00  INFO 9248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T18:59:13.282+01:00  INFO 9248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-11-28T18:59:13.361+01:00  INFO 9248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T18:59:13.362+01:00  INFO 9248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T18:59:13.362+01:00  INFO 9248 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T18:59:13.394+01:00  INFO 9248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T18:59:13.395+01:00  INFO 9248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 267 ms
+2024-11-28T18:59:13.427+01:00  INFO 9248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-28T18:59:13.447+01:00  INFO 9248 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dcd9bd6
+2024-11-28T18:59:13.447+01:00  INFO 9248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-28T18:59:13.448+01:00  INFO 9248 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T18:59:13.450+01:00  INFO 9248 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T18:59:13.459+01:00  INFO 9248 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T18:59:13.477+01:00  INFO 9248 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T18:59:13.477+01:00  INFO 9248 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T18:59:13.503+01:00  WARN 9248 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T18:59:13.593+01:00  INFO 9248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T18:59:13.603+01:00  INFO 9248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T18:59:13.606+01:00  INFO 9248 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 0.507 seconds (process running for 36.917)
+2024-11-28T18:59:13.607+01:00  INFO 9248 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-28T19:01:09.213+01:00  INFO 3392 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 3392 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:01:09.216+01:00  INFO 3392 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:01:09.280+01:00  INFO 3392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T19:01:09.280+01:00  INFO 3392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T19:01:09.839+01:00  INFO 3392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:01:09.857+01:00  INFO 3392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:01:10.327+01:00  INFO 3392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:01:10.339+01:00  INFO 3392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:01:10.340+01:00  INFO 3392 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:01:10.404+01:00  INFO 3392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:01:10.405+01:00  INFO 3392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1123 ms
+2024-11-28T19:01:10.511+01:00  INFO 3392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T19:01:10.853+01:00  INFO 3392 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2558d1d5
+2024-11-28T19:01:10.855+01:00  INFO 3392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T19:01:10.893+01:00  INFO 3392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:01:10.941+01:00  INFO 3392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T19:01:10.970+01:00  INFO 3392 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:01:11.251+01:00  INFO 3392 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:01:11.594+01:00  INFO 3392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:01:11.599+01:00  INFO 3392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:01:11.682+01:00  WARN 3392 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:01:12.008+01:00  INFO 3392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:01:12.065+01:00  INFO 3392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:01:12.074+01:00  INFO 3392 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 3.251 seconds (process running for 3.901)
+2024-11-28T19:01:17.040+01:00  INFO 3392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T19:01:17.040+01:00  INFO 3392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T19:01:17.042+01:00  INFO 3392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+nov. 28, 2024 7:01:17 PM sio.app.camping_api.services.InscriptionService insertInscription
+WARNING: No creneaux found with id_creneaux: 0
+2024-11-28T19:01:17.211+01:00  WARN 3392 --- [http-nio-8080-exec-1] s.a.c.services.InscriptionService        : No creneaux found with id_creneaux: 0
+2024-11-28T19:05:29.527+01:00  INFO 13636 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 13636 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:05:29.528+01:00  INFO 13636 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:05:29.570+01:00  INFO 13636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T19:05:29.570+01:00  INFO 13636 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T19:05:29.947+01:00  INFO 13636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:05:29.959+01:00  INFO 13636 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:05:30.248+01:00  INFO 13636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:05:30.257+01:00  INFO 13636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:05:30.257+01:00  INFO 13636 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:05:30.287+01:00  INFO 13636 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:05:30.287+01:00  INFO 13636 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 717 ms
+2024-11-28T19:05:30.362+01:00  INFO 13636 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T19:05:30.596+01:00  INFO 13636 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ccd9fa0
+2024-11-28T19:05:30.597+01:00  INFO 13636 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T19:05:30.624+01:00  INFO 13636 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:05:30.655+01:00  INFO 13636 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T19:05:30.672+01:00  INFO 13636 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:05:30.850+01:00  INFO 13636 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:05:31.084+01:00  INFO 13636 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:05:31.087+01:00  INFO 13636 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:05:31.128+01:00  WARN 13636 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:05:31.334+01:00  INFO 13636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:05:31.355+01:00  INFO 13636 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:05:31.360+01:00  INFO 13636 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 2.125 seconds (process running for 2.577)
+2024-11-28T19:05:40.818+01:00  INFO 13636 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T19:05:40.818+01:00  INFO 13636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T19:05:40.819+01:00  INFO 13636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-28T19:05:40.914+01:00  WARN 13636 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public void sio.app.camping_api.controllers.InscriptionController.insertOrUpdateInscription(sio.app.camping_api.entity.Inscription,sio.app.camping_api.entity.Creneaux)]
+2024-11-28T19:07:18.864+01:00  WARN 13636 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public void sio.app.camping_api.controllers.InscriptionController.insertOrUpdateInscription(sio.app.camping_api.entity.Inscription,sio.app.camping_api.entity.Creneaux)]
+2024-11-28T19:07:54.396+01:00  WARN 13636 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public void sio.app.camping_api.controllers.InscriptionController.insertOrUpdateInscription(sio.app.camping_api.entity.Inscription,sio.app.camping_api.entity.Creneaux)]
+2024-11-28T19:09:59.451+01:00  INFO 21860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 21860 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:09:59.453+01:00  INFO 21860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:09:59.492+01:00  INFO 21860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T19:09:59.492+01:00  INFO 21860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T19:09:59.850+01:00  INFO 21860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:09:59.861+01:00  INFO 21860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:10:00.156+01:00  INFO 21860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:10:00.164+01:00  INFO 21860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:10:00.164+01:00  INFO 21860 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:10:00.196+01:00  INFO 21860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:10:00.197+01:00  INFO 21860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 705 ms
+2024-11-28T19:10:00.273+01:00  INFO 21860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T19:10:00.511+01:00  INFO 21860 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ade3308
+2024-11-28T19:10:00.512+01:00  INFO 21860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T19:10:00.538+01:00  INFO 21860 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:10:00.566+01:00  INFO 21860 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T19:10:00.586+01:00  INFO 21860 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:10:00.767+01:00  INFO 21860 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:10:00.994+01:00  INFO 21860 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:10:00.997+01:00  INFO 21860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:10:01.037+01:00  WARN 21860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:10:01.247+01:00  INFO 21860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:10:01.267+01:00  INFO 21860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:10:01.272+01:00  INFO 21860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 2.11 seconds (process running for 2.648)
+2024-11-28T19:10:05.222+01:00  INFO 21860 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T19:10:05.223+01:00  INFO 21860 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T19:10:05.224+01:00  INFO 21860 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-28T19:10:05.319+01:00  WARN 21860 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public void sio.app.camping_api.controllers.InscriptionController.insertOrUpdateInscription(sio.app.camping_api.entity.Inscription,sio.app.camping_api.entity.Creneaux)]
+2024-11-28T19:10:43.442+01:00  WARN 21860 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public void sio.app.camping_api.controllers.InscriptionController.insertOrUpdateInscription(sio.app.camping_api.entity.Inscription,sio.app.camping_api.entity.Creneaux)]
+2024-11-28T19:12:28.564+01:00  WARN 21860 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public void sio.app.camping_api.controllers.InscriptionController.insertOrUpdateInscription(sio.app.camping_api.entity.Inscription,sio.app.camping_api.entity.Creneaux)]
+2024-11-28T19:12:28.786+01:00  INFO 21860 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2024-11-28T19:12:28.794+01:00  INFO 21860 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:12:28.796+01:00  INFO 21860 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-28T19:12:28.802+01:00  INFO 21860 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-28T19:12:28.861+01:00  INFO 21860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 21860 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:12:28.861+01:00  INFO 21860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:12:28.962+01:00  INFO 21860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:12:28.964+01:00  INFO 21860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:12:29.015+01:00  INFO 21860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:12:29.015+01:00  INFO 21860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:12:29.016+01:00  INFO 21860 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:12:29.026+01:00  INFO 21860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:12:29.026+01:00  INFO 21860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 163 ms
+2024-11-28T19:12:29.055+01:00  INFO 21860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-28T19:12:29.078+01:00  INFO 21860 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24a90fd3
+2024-11-28T19:12:29.078+01:00  INFO 21860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-28T19:12:29.079+01:00  INFO 21860 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:12:29.080+01:00  INFO 21860 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:12:29.085+01:00  INFO 21860 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:12:29.109+01:00  INFO 21860 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:12:29.109+01:00  INFO 21860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:12:29.128+01:00  WARN 21860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:12:29.191+01:00  INFO 21860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:12:29.198+01:00  INFO 21860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:12:29.200+01:00  INFO 21860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 0.357 seconds (process running for 150.564)
+2024-11-28T19:12:29.201+01:00  INFO 21860 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-28T19:12:46.475+01:00  INFO 20004 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 20004 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:12:46.476+01:00  INFO 20004 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:12:46.515+01:00  INFO 20004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T19:12:46.515+01:00  INFO 20004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T19:12:46.879+01:00  INFO 20004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:12:46.891+01:00  INFO 20004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:12:47.176+01:00  INFO 20004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:12:47.185+01:00  INFO 20004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:12:47.186+01:00  INFO 20004 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:12:47.217+01:00  INFO 20004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:12:47.217+01:00  INFO 20004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 701 ms
+2024-11-28T19:12:47.292+01:00  INFO 20004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T19:12:47.531+01:00  INFO 20004 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bb6c4a8
+2024-11-28T19:12:47.532+01:00  INFO 20004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T19:12:47.560+01:00  INFO 20004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:12:47.590+01:00  INFO 20004 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T19:12:47.610+01:00  INFO 20004 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:12:47.795+01:00  INFO 20004 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:12:48.022+01:00  INFO 20004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:12:48.025+01:00  INFO 20004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:12:48.068+01:00  WARN 20004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:12:48.279+01:00  INFO 20004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:12:48.298+01:00  INFO 20004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:12:48.303+01:00  INFO 20004 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 2.12 seconds (process running for 2.587)
+2024-11-28T19:12:52.629+01:00  INFO 2860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 2860 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:12:52.631+01:00  INFO 2860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:12:52.677+01:00  INFO 2860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T19:12:52.678+01:00  INFO 2860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T19:12:53.118+01:00  INFO 2860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:12:53.136+01:00  INFO 2860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:12:53.459+01:00  INFO 2860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:12:53.469+01:00  INFO 2860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:12:53.470+01:00  INFO 2860 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:12:53.501+01:00  INFO 2860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:12:53.501+01:00  INFO 2860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 823 ms
+2024-11-28T19:12:53.578+01:00  INFO 2860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T19:12:53.819+01:00  INFO 2860 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6315ed89
+2024-11-28T19:12:53.821+01:00  INFO 2860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T19:12:53.849+01:00  INFO 2860 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:12:53.881+01:00  INFO 2860 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T19:12:53.915+01:00  INFO 2860 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:12:54.111+01:00  INFO 2860 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:12:54.355+01:00  INFO 2860 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:12:54.358+01:00  INFO 2860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:12:54.402+01:00  WARN 2860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:12:54.620+01:00  INFO 2860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:12:54.640+01:00  INFO 2860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:12:54.645+01:00  INFO 2860 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 2.297 seconds (process running for 3.148)
+2024-11-28T19:13:04.502+01:00  INFO 20772 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 20772 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:13:04.503+01:00  INFO 20772 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:13:04.544+01:00  INFO 20772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-28T19:13:04.544+01:00  INFO 20772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-28T19:13:04.922+01:00  INFO 20772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:13:04.934+01:00  INFO 20772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:13:05.211+01:00  INFO 20772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:13:05.219+01:00  INFO 20772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:13:05.219+01:00  INFO 20772 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:13:05.247+01:00  INFO 20772 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:13:05.247+01:00  INFO 20772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 703 ms
+2024-11-28T19:13:05.325+01:00  INFO 20772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-28T19:13:05.560+01:00  INFO 20772 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a3a2ef7
+2024-11-28T19:13:05.561+01:00  INFO 20772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-28T19:13:05.585+01:00  INFO 20772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:13:05.614+01:00  INFO 20772 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-28T19:13:05.633+01:00  INFO 20772 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:13:05.812+01:00  INFO 20772 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:13:06.030+01:00  INFO 20772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:13:06.033+01:00  INFO 20772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:13:06.071+01:00  WARN 20772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:13:06.281+01:00  INFO 20772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:13:06.301+01:00  INFO 20772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:13:06.307+01:00  INFO 20772 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 2.076 seconds (process running for 2.519)
+2024-11-28T19:13:12.697+01:00  INFO 20772 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T19:13:12.697+01:00  INFO 20772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T19:13:12.698+01:00  INFO 20772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+nov. 28, 2024 7:13:12 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: id_global: 1, places_totales: 16, places_prises: 3
+2024-11-28T19:13:12.833+01:00  INFO 20772 --- [http-nio-8080-exec-1] s.a.c.services.InscriptionService        : id_global: 1, places_totales: 16, places_prises: 3
+nov. 28, 2024 7:13:12 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Inserted into inscription with liste_attente = false
+2024-11-28T19:13:12.839+01:00  INFO 20772 --- [http-nio-8080-exec-1] s.a.c.services.InscriptionService        : Inserted into inscription with liste_attente = false
+nov. 28, 2024 7:13:12 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Updated creneaux places_prises
+2024-11-28T19:13:12.841+01:00  INFO 20772 --- [http-nio-8080-exec-1] s.a.c.services.InscriptionService        : Updated creneaux places_prises
+nov. 28, 2024 7:15:25 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: id_global: 1, places_totales: 16, places_prises: 4
+2024-11-28T19:15:25.305+01:00  INFO 20772 --- [http-nio-8080-exec-5] s.a.c.services.InscriptionService        : id_global: 1, places_totales: 16, places_prises: 4
+nov. 28, 2024 7:15:25 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Inserted into inscription with liste_attente = false
+2024-11-28T19:15:25.308+01:00  INFO 20772 --- [http-nio-8080-exec-5] s.a.c.services.InscriptionService        : Inserted into inscription with liste_attente = false
+nov. 28, 2024 7:15:25 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Updated creneaux places_prises
+2024-11-28T19:15:25.310+01:00  INFO 20772 --- [http-nio-8080-exec-5] s.a.c.services.InscriptionService        : Updated creneaux places_prises
+nov. 28, 2024 7:16:41 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: id_global: 1, places_totales: 16, places_prises: 5
+2024-11-28T19:16:41.338+01:00  INFO 20772 --- [http-nio-8080-exec-8] s.a.c.services.InscriptionService        : id_global: 1, places_totales: 16, places_prises: 5
+nov. 28, 2024 7:16:41 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Inserted into inscription with liste_attente = false
+2024-11-28T19:16:41.350+01:00  INFO 20772 --- [http-nio-8080-exec-8] s.a.c.services.InscriptionService        : Inserted into inscription with liste_attente = false
+nov. 28, 2024 7:16:41 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Updated creneaux places_prises
+2024-11-28T19:16:41.352+01:00  INFO 20772 --- [http-nio-8080-exec-8] s.a.c.services.InscriptionService        : Updated creneaux places_prises
+2024-11-28T19:19:07.871+01:00  INFO 20772 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-28T19:19:07.887+01:00  INFO 20772 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:19:07.890+01:00  INFO 20772 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-28T19:19:07.894+01:00  INFO 20772 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-28T19:19:07.945+01:00  INFO 20772 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Starting CampingApiApplication using Java 23.0.1 with PID 20772 (C:\Users\todog\Documents\GitHub\camping_api\target\classes started by todog in C:\Users\todog\Documents\GitHub\camping_api)
+2024-11-28T19:19:07.945+01:00  INFO 20772 --- [restartedMain] s.app.camping_api.CampingApiApplication  : The following 1 profile is active: "dev"
+2024-11-28T19:19:08.043+01:00  INFO 20772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-28T19:19:08.047+01:00  INFO 20772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-11-28T19:19:08.156+01:00  INFO 20772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-28T19:19:08.157+01:00  INFO 20772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-28T19:19:08.157+01:00  INFO 20772 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-28T19:19:08.173+01:00  INFO 20772 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-28T19:19:08.173+01:00  INFO 20772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 227 ms
+2024-11-28T19:19:08.189+01:00  INFO 20772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-28T19:19:08.199+01:00  INFO 20772 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@aab3865
+2024-11-28T19:19:08.200+01:00  INFO 20772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-28T19:19:08.200+01:00  INFO 20772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-28T19:19:08.201+01:00  INFO 20772 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-28T19:19:08.205+01:00  INFO 20772 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-28T19:19:08.217+01:00  INFO 20772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-28T19:19:08.217+01:00  INFO 20772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-28T19:19:08.233+01:00  WARN 20772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-28T19:19:08.305+01:00  INFO 20772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-28T19:19:08.311+01:00  INFO 20772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-28T19:19:08.313+01:00  INFO 20772 --- [restartedMain] s.app.camping_api.CampingApiApplication  : Started CampingApiApplication in 0.384 seconds (process running for 364.498)
+2024-11-28T19:19:08.315+01:00  INFO 20772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-28T19:19:36.545+01:00  INFO 20772 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-28T19:19:36.545+01:00  INFO 20772 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-28T19:19:36.546+01:00  INFO 20772 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+nov. 28, 2024 7:19:36 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: id_global: 3, places_totales: 7, places_prises: 7
+2024-11-28T19:19:36.562+01:00  INFO 20772 --- [http-nio-8080-exec-3] s.a.c.services.InscriptionService        : id_global: 3, places_totales: 7, places_prises: 7
+nov. 28, 2024 7:19:36 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Selected creneaux with id_creneaux: 148
+2024-11-28T19:19:36.562+01:00  INFO 20772 --- [http-nio-8080-exec-3] s.a.c.services.InscriptionService        : Selected creneaux with id_creneaux: 148
+nov. 28, 2024 7:19:36 PM sio.app.camping_api.services.InscriptionService insertInscription
+INFO: Inserted into inscription with liste_attente = true
+2024-11-28T19:19:36.568+01:00  INFO 20772 --- [http-nio-8080-exec-3] s.a.c.services.InscriptionService        : Inserted into inscription with liste_attente = true
