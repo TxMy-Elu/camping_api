@@ -18,6 +18,7 @@ public class CreneauxService {
     @Value("${spring.datasource.password}")
     private String databasePassword;
 
+
     public List<Map<String, Object>> getAllCreneaux() {
         List<Map<String, Object>> creneauxList = new ArrayList<>();
         String query = "SELECT * FROM relation1 "
