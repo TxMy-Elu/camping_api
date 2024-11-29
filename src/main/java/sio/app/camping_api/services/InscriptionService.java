@@ -17,7 +17,7 @@ public class InscriptionService {
 
     static {
         try {
-            FileHandler fileHandler = new FileHandler("logs/camping_api.log", true);
+            FileHandler fileHandler = new FileHandler("logs/api.log", true);
             fileHandler.setFormatter(new SimpleFormatter());
             LOGGER.addHandler(fileHandler);
             LOGGER.setLevel(Level.INFO);
