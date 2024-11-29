@@ -20,4 +20,12 @@ public class InscriptionController {
             inscriptionRequest.getInscription().getDate_inscription()
         );
     }
+
+    @DeleteMapping("/deleteInscription")
+    public void deleteInscription(@RequestBody InscriptionRequest inscriptionRequest) {
+        inscriptionService.deleteInscription(
+            inscriptionRequest.getInscription().getId_compte(),
+            inscriptionRequest.getCreneaux().getId_creneaux()
+        );
+    }
 }
