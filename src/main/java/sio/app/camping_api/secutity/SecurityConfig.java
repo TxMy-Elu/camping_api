@@ -33,9 +33,9 @@ public class SecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable) // Désactive CSRF avec la nouvelle syntaxe
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**").permitAll()
                         // Permettre l'accès libre aux routes d 'authentification
-                        .requestMatchers("/metrics").hasRole("USER")
+                        .requestMatchers("/compte/allCompte").hasRole("client")
                         // Autoriser uniquement les USER
-                        .requestMatchers("/metrics/all").hasRole("ADMIN") // Autoriser uniquement les USER
+                         // Autoriser uniquement les USER
                         .anyRequest().authenticated() // Toutes les autres routes doivent être authentifiées
                 ).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Gestion de session sans état
                 );
