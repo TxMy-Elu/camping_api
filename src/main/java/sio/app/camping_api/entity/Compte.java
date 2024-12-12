@@ -12,7 +12,7 @@ import java.util.Collections;
 @Entity
 public class Compte implements UserDetails {
 
-    @Id
+     @Id
     @GeneratedValue
     private Long id_compte;
 
@@ -21,9 +21,8 @@ public class Compte implements UserDetails {
     private String email;
     private String password;
 
-
     @Enumerated(EnumType.STRING)
-    private String role;
+    private Role role;
 
     private int abscences;
     private boolean bloque;
@@ -67,11 +66,11 @@ public class Compte implements UserDetails {
         this.password = password;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
