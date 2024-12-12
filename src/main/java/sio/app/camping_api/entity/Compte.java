@@ -1,6 +1,12 @@
 package sio.app.camping_api.entity;
 
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
+import java.util.Collection;
+import java.util.Collections;
+
 public class Compte {
 
     private int id_compte;
@@ -120,6 +126,12 @@ public class Compte {
     @Override
     public String toString() {
         return "Compte{" + "id_compte=" + id_compte + ", username='" + username + '\'' + ", email='" + email + '\'' + ", password='" + password + '\'' + ", role='" + role + '\'' + ", abscences=" + abscences + '}';
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        // Retourne le rôle unique de l'utilisateur sous forme de collection avec un seul élément
+        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + this.role.toString()));
     }
 
 
