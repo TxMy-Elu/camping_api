@@ -36,5 +36,6 @@ public class InscriptionController {
      public List<Map<String, Object>> getRegisteredUsers(@PathVariable Long activiteId) {
         return inscriptionService.getRegisteredUsers(activiteId);
     }
+
 }
 
