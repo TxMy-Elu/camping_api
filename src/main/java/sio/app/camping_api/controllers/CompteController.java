@@ -24,4 +24,10 @@ public class CompteController {
         return CompteService.getAllCompte();
 
     }
+
+    @GetMapping("/compteBloque")
+    public List<Map<String, Object>> getCompteBloque() {
+        return CompteService.getCompteBloque();
+
+    }
 }

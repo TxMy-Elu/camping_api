@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import sio.app.camping_api.dto.InscriptionRequest;
 import sio.app.camping_api.services.InscriptionService;
 
+import java.util.List;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/inscription")
 public class InscriptionController {
@@ -28,4 +31,10 @@ public class InscriptionController {
             inscriptionRequest.getCreneaux().getId_creneaux()
         );
     }
+
+    @GetMapping("/getRegisteredUsers/{activiteId}")
+     public List<Map<String, Object>> getRegisteredUsers(@PathVariable Long activiteId) {
+        return inscriptionService.getRegisteredUsers(activiteId);
+    }
 }
+

@@ -12,33 +12,57 @@ import java.util.Map;
 @Service
 public class CompteService {
 
-        @Value("${spring.datasource.url}")
-        private String databaseUrl;
-        @Value("${spring.datasource.username}")
-        private String databaseUsername;
-        @Value("${spring.datasource.password}")
-        private String databasePassword;
+    @Value("${spring.datasource.url}")
+    private String databaseUrl;
+    @Value("${spring.datasource.username}")
+    private String databaseUsername;
+    @Value("${spring.datasource.password}")
+    private String databasePassword;
 
-        public List<Map<String, Object>> getAllCompte() {
-            List<Map<String, Object>> compteList = new ArrayList<>();
-            String query = "SELECT * FROM compte ";
+    public List<Map<String, Object>> getAllCompte() {
+        List<Map<String, Object>> compteList = new ArrayList<>();
+        String query = "SELECT * FROM compte ";
 
-            try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
-                while (rs.next()) {
-                    Map<String, Object> compte = new HashMap<>();
-                    compte.put("id_compte", rs.getInt("id_compte"));
-                    compte.put("nom", rs.getString("compte.nom"));
-                    compte.put("prenom", rs.getString("compte.prenom"));
-                    compte.put("email", rs.getString("email"));
-                    compte.put("password", rs.getString("password"));
-                    compte.put("role", rs.getString("role"));
-                    compte.put("absences", rs.getInt("absences"));
-                    compteList.add(compte);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+        try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
+            while (rs.next()) {
+                Map<String, Object> compte = new HashMap<>();
+                compte.put("id_compte", rs.getInt("id_compte"));
+                compte.put("nom", rs.getString("compte.nom"));
+                compte.put("prenom", rs.getString("compte.prenom"));
+                compte.put("email", rs.getString("email"));
+                compte.put("password", rs.getString("password"));
+                compte.put("role", rs.getString("role"));
+                compte.put("absences", rs.getInt("absences"));
+                compteList.add(compte);
             }
-            return compteList;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
+        return compteList;
     }
+
+    public List<Map<String, Object>> getCompteBloque() {
+        List<Map<String, Object>> compteListBloque = new ArrayList<>();
+        String query = "SELECT * FROM compte where bloque = true";
+
+        try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
+            while (rs.next()) {
+                Map<String, Object> compte = new HashMap<>();
+                compte.put("id_compte", rs.getInt("id_compte"));
+                compte.put("nom", rs.getString("compte.nom"));
+                compte.put("prenom", rs.getString("compte.prenom"));
+                compte.put("email", rs.getString("email"));
+                compte.put("password", rs.getString("password"));
+                compte.put("role", rs.getString("role"));
+                compte.put("absences", rs.getInt("absences"));
+                compteListBloque.add(compte);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return compteListBloque;
+    }
+
+}
+
+
