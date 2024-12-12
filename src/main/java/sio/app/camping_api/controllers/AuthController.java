@@ -1,6 +1,8 @@
 package sio.app.camping_api.controllers;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,6 +21,7 @@ import java.util.Map;
 @RequestMapping("/auth")
 public class AuthController {
 
+    private static final Logger log = LoggerFactory.getLogger(AuthController.class);
     @Autowired
     private AuthenticationManager authenticationManager;
 
@@ -30,16 +33,16 @@ public class AuthController {
         try {
             Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
 
+            log.info("User authenticated : " + email);
+            log.info(authentication.getAuthorities().toString());
+
+
             String jwt = jwtUtils.generateJwtToken(email);
-/*
+
             Map<String, String> response = new HashMap<>();
             response.put("token", jwt);
             return response;
-            */
-            Map<String, String> response = new HashMap<>();
-            response.put("resu", "ok");
 
-            return response;
         } catch (AuthenticationException e) {
             e.printStackTrace();
             throw new RuntimeException("Nom d'utilisateur ou mot de passe incorrect");
