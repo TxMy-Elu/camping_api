@@ -31,12 +31,17 @@ public class AuthController {
             Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
 
             String jwt = jwtUtils.generateJwtToken(email);
-
+/*
             Map<String, String> response = new HashMap<>();
             response.put("token", jwt);
             return response;
+            */
+            Map<String, String> response = new HashMap<>();
+            response.put("resu", "ok");
 
+            return response;
         } catch (AuthenticationException e) {
+            e.printStackTrace();
             throw new RuntimeException("Nom d'utilisateur ou mot de passe incorrect");
         }
     }

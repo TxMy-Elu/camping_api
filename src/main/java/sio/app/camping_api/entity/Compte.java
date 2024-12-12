@@ -24,7 +24,7 @@ public class Compte implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    private int abscences;
+    private int absences;
     private boolean bloque;
 
     //getters and setters
@@ -74,12 +74,12 @@ public class Compte implements UserDetails {
         this.role = role;
     }
 
-    public int getAbscences() {
-        return abscences;
+    public int getAbsences() {
+        return absences;
     }
 
-    public void setAbscences(int abscences) {
-        this.abscences = abscences;
+    public void setAbsences(int absences) {
+        this.absences = absences;
     }
 
     public boolean isBloque() {
