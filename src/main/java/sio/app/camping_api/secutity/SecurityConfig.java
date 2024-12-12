@@ -32,9 +32,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable) // Désactive CSRF avec la nouvelle syntaxe
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
-                        // Permettre l'accès libre aux routes d 'authentification
-                        .requestMatchers("/compte/allCompte").hasRole("client")
-                        // Autoriser uniquement les USER
+                        // plusieur roles
+                        .requestMatchers("/compte/allCompte").hasAnyRole("client","admin")
+                        // un seul role
+                        .requestMatchers("/compte/**").hasRole("client")
                          // Autoriser uniquement les USER
                         .anyRequest().authenticated() // Toutes les autres routes doivent être authentifiées
                 ).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Gestion de session sans état
