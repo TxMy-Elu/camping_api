@@ -42,7 +42,6 @@ public class CreneauxService {
                 creneaux.put("prenom_animateur", rs.getString("compte.prenom"));
                 creneaux.put("id_global", rs.getInt("id_global"));
 
-
                 creneauxList.add(creneaux);
             }
         } catch (SQLException e) {
