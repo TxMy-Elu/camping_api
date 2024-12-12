@@ -114,7 +114,7 @@ public class InscriptionService {
                         try (ResultSet waitingListRs = checkWaitingListPstmt.executeQuery()) {
                             if (waitingListRs.next() && waitingListRs.getInt(1) > 0) {
                                 // Move the first person from the waiting list to the main list
-                                String updateListeAttenteQuery = "UPDATE inscription SET liste_attente = false WHERE id_creneaux = ? AND liste_attente = true ORDER BY date_inscription ASC LIMIT 1";
+                                String updateListeAttenteQuery = "UPDATE inscription SET liste_attente = false, est_valide = true WHERE id_creneaux = ? AND liste_attente = true ORDER BY date_inscription ASC LIMIT 1";
                                 try (PreparedStatement updateListeAttentePstmt = conn.prepareStatement(updateListeAttenteQuery)) {
                                     updateListeAttentePstmt.setInt(1, idCreneaux);
                                     updateListeAttentePstmt.executeUpdate();
@@ -142,7 +142,7 @@ public class InscriptionService {
 
     public List<Map<String, Object>> getRegisteredUsers(Long activiteId) {
         List<Map<String, Object>> registeredUsers = new ArrayList<>();
-        String query = "SELECT c.id_compte, c.nom, c.prenom FROM inscription i JOIN compte c ON i.id_compte = c.id_compte WHERE i.id_creneaux = ?";
+        String query = "SELECT c.id_compte, c.nom, c.prenom FROM inscription i JOIN compte c ON i.id_compte = c.id_compte WHERE i.id_creneaux = ? AND i.est_valide = true";
         try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword);
              PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setLong(1, activiteId);
