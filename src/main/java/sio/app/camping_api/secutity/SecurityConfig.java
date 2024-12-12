@@ -25,13 +25,13 @@ public class SecurityConfig {
         this.customCompteDetailsService = customUserDetailsService;
         this.passwordEncoder = passwordEncoder;
 
-        System.out.println(this.passwordEncoder.encode("password123"));
+        System.out.println("PASSWORD : " +this.passwordEncoder.encode("client"));
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable) // Désactive CSRF avec la nouvelle syntaxe
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**").permitAll()
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
                         // Permettre l'accès libre aux routes d 'authentification
                         .requestMatchers("/compte/allCompte").hasRole("client")
                         // Autoriser uniquement les USER

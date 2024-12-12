@@ -26,11 +26,11 @@ public class AuthController {
     private JwtUtils jwtUtils;
 
     @PostMapping("/login")
-    public Map<String, String> authenticateUser(@RequestParam String username, @RequestParam String password) {
+    public Map<String, String> authenticateUser(@RequestParam String email, @RequestParam String password) {
         try {
-            Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+            Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
 
-            String jwt = jwtUtils.generateJwtToken(username);
+            String jwt = jwtUtils.generateJwtToken(email);
 
             Map<String, String> response = new HashMap<>();
             response.put("token", jwt);
