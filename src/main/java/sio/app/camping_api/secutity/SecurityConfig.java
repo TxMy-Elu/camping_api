@@ -33,16 +33,7 @@ public class SecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable) // Désactive CSRF avec la nouvelle syntaxe
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
                         // plusieur roles
-                        .requestMatchers("/compte/allCompte").hasAnyRole("client","admin","client_bloque","animateur")
-                        .requestMatchers("/appel/gererAbsence").hasRole("animateur")
-                        .requestMatchers("/appel/debloquerCompte").hasRole("admin")
-                        .requestMatchers("/compte/compteBloque").hasRole("admin")
-                        .requestMatchers("/crenaux/allCrenaux").hasAnyRole("client","admin","animateur")
-                        .requestMatchers("/inscription/insertOrUpdateInscription").hasAnyRole("client","admin","animateur")
-                        .requestMatchers("/inscription/deleteInscription").hasAnyRole("client","admin","animateur")
-                        .requestMatchers("/inscription/getRegisteredUsers/{activiteId}").hasAnyRole("admin","animateur")
-                        // un seul role
-                        .requestMatchers("/compte/**").hasRole("client")
+                        .requestMatchers("/**").permitAll()
                          // Autoriser uniquement les USER
                         .anyRequest().authenticated() // Toutes les autres routes doivent être authentifiées
                 ).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Gestion de session sans état
