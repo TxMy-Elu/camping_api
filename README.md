@@ -183,4 +183,3 @@ L'application utilise JWT pour sécuriser les points de terminaison. La classe `
       }
     ]
     ```
-re to replace the placeholder information with your actual project details and author information.
