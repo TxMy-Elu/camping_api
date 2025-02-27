@@ -25,7 +25,7 @@ public class SecurityConfig {
         this.customCompteDetailsService = customUserDetailsService;
         this.passwordEncoder = passwordEncoder;
 
-        System.out.println("PASSWORD : " +this.passwordEncoder.encode("client"));
+        System.out.println("PASSWORD : " +this.passwordEncoder.encode("1606"));
     }
 
     @Bean
