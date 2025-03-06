@@ -1,4 +1,4 @@
-package sio.app.camping_api.secutity;
+package sio.app.camping_api.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,13 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+import sio.app.camping_api.secutity.JwtAuthTokenFilter;
 import sio.app.camping_api.services.CustomCompteDetailsService;
+
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -25,29 +31,45 @@ public class SecurityConfig {
         this.customCompteDetailsService = customUserDetailsService;
         this.passwordEncoder = passwordEncoder;
 
-        System.out.println("PASSWORD : " +this.passwordEncoder.encode("1606"));
+        System.out.println("PASSWORD : " + this.passwordEncoder.encode("1606"));
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf(AbstractHttpConfigurer::disable) // Désactive CSRF avec la nouvelle syntaxe
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
-                        // plusieur roles
-                        .requestMatchers("/compte/allCompte").hasAnyRole("client","admin","client_bloque","animateur")
-                        .requestMatchers("/appel/gererAbsence").hasRole("animateur")
-                        .requestMatchers("/appel/debloquerCompte").hasRole("admin")
-                        .requestMatchers("/compte/compteBloque").hasRole("admin")
-                        .requestMatchers("/crenaux/allCrenaux").hasAnyRole("client","admin","animateur")
-                        .requestMatchers("/inscription/insertOrUpdateInscription").hasAnyRole("client","admin","animateur")
-                        .requestMatchers("/inscription/deleteInscription").hasAnyRole("client","admin","animateur")
-                        .requestMatchers("/inscription/getRegisteredUsers/{activiteId}").hasAnyRole("admin","animateur")
-                        // un seul role
-                        .requestMatchers("/compte/**").hasRole("client")
-                        .anyRequest().authenticated() // Toutes les autres routes doivent être authentifiées
-                ).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Gestion de session sans état
-                );
+        http
+            .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Activation correcte de CORS
+            .csrf(AbstractHttpConfigurer::disable) // Désactiver CSRF
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/auth/**").permitAll()
+                .requestMatchers("/compte/allCompte").hasAnyRole("client", "admin", "client_bloque", "animateur")
+                .requestMatchers("/appel/gererAbsence").hasRole("animateur")
+                .requestMatchers("/appel/debloquerCompte").hasRole("admin")
+                .requestMatchers("/compte/compteBloque").hasRole("admin")
+                .requestMatchers("/creneaux/allCreneaux").hasAnyRole("client", "admin", "animateur")
+                .requestMatchers("/inscription/insertOrUpdateInscription").hasAnyRole("client", "admin", "animateur")
+                .requestMatchers("/inscription/deleteInscription").hasAnyRole("client", "admin", "animateur")
+                .requestMatchers("/inscription/getRegisteredUsers/{activiteId}").hasAnyRole("admin", "animateur")
+                .requestMatchers("/compte/**").hasRole("client")
+                .anyRequest().authenticated()
+            )
+            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+
         http.addFilterBefore(jwtAuthTokenFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
+    }
+
+    // ✅ Ajout de la méthode correcte pour la configuration CORS
+    @Bean
+    public UrlBasedCorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowedOrigins(List.of("http://localhost:3000")); // Autorise React
+        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
+        config.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+        return source;
     }
 
     @Bean

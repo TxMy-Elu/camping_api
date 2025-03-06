@@ -10,6 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/appel")
+@CrossOrigin("http://localhost:3000")
 public class AppelController {
 
     private final AppelService appelService;

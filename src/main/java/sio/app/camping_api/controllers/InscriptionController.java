@@ -10,6 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/inscription")
+@CrossOrigin("http://localhost:3000")
 public class InscriptionController {
 
     @Autowired
