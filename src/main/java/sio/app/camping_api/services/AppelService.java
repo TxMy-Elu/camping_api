@@ -28,6 +28,12 @@ public class AppelService {
                     pstmt.executeUpdate();
                 }
 
+                // Set estAbs to true in inscription
+                try (PreparedStatement pstmt = conn.prepareStatement("UPDATE inscription SET estAbs = 1 WHERE id_compte = ?")) {
+                    pstmt.setLong(1, compteId);
+                    pstmt.executeUpdate();
+                }
+
                 // Check if absences >= 3
                 try (PreparedStatement pstmt = conn.prepareStatement("SELECT absences FROM compte WHERE id_compte = ?")) {
                     pstmt.setLong(1, compteId);

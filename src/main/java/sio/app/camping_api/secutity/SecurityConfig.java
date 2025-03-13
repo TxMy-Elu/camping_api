@@ -42,7 +42,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/compte/allCompte").hasAnyRole("client", "admin", "client_bloque", "animateur")
-                .requestMatchers("/appel/gererAbsence").hasRole("animateur")
+                .requestMatchers("/appel/gererAbsence").hasAnyRole("animateur", "admin")
                 .requestMatchers("/appel/debloquerCompte").hasRole("admin")
                 .requestMatchers("/compte/compteBloque").hasRole("admin")
                 .requestMatchers("/creneaux/allCreneaux").hasAnyRole("client", "admin", "animateur")
@@ -58,7 +58,6 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // ✅ Ajout de la méthode correcte pour la configuration CORS
     @Bean
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
