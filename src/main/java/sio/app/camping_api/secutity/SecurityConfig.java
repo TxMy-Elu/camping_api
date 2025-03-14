@@ -13,7 +13,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 import sio.app.camping_api.secutity.JwtAuthTokenFilter;
 import sio.app.camping_api.services.CustomCompteDetailsService;
 
@@ -37,22 +36,23 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Activation correcte de CORS
-            .csrf(AbstractHttpConfigurer::disable) // Désactiver CSRF
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/auth/**").permitAll()
-                .requestMatchers("/compte/allCompte").hasAnyRole("client", "admin", "client_bloque", "animateur")
-                .requestMatchers("/appel/gererAbsence").hasAnyRole("animateur", "admin")
-                .requestMatchers("/appel/debloquerCompte").hasRole("admin")
-                .requestMatchers("/compte/compteBloque").hasRole("admin")
-                .requestMatchers("/creneaux/allCreneaux").hasAnyRole("client", "admin", "animateur")
-                .requestMatchers("/inscription/insertOrUpdateInscription").hasAnyRole("client", "admin", "animateur")
-                .requestMatchers("/inscription/deleteInscription").hasAnyRole("client", "admin", "animateur")
-                .requestMatchers("/inscription/getRegisteredUsers/{activiteId}").hasAnyRole("admin", "animateur", "client")
-                .requestMatchers("/compte/**").hasRole("client")
-                .anyRequest().authenticated()
-            )
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Activation correcte de CORS
+                .csrf(AbstractHttpConfigurer::disable) // Désactiver CSRF
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/compte/allCompte").hasAnyRole("client", "admin", "client_bloque", "animateur")
+                        .requestMatchers("/compte/role").permitAll()
+                        .requestMatchers("/appel/gererAbsence").hasAnyRole("animateur", "admin")
+                        .requestMatchers("/appel/debloquerCompte").hasRole("admin")
+                        .requestMatchers("/compte/compteBloque").hasRole("admin")
+                        .requestMatchers("/creneaux/allCreneaux").hasAnyRole("client", "admin", "animateur")
+                        .requestMatchers("/inscription/insertOrUpdateInscription").hasAnyRole("client", "admin", "animateur")
+                        .requestMatchers("/inscription/deleteInscription").hasAnyRole("client", "admin", "animateur")
+                        .requestMatchers("/inscription/getRegisteredUsers/{activiteId}").hasAnyRole("admin", "animateur", "client")
+                        .requestMatchers("/compte/**").hasRole("client")
+                        .anyRequest().authenticated()
+                )
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         http.addFilterBefore(jwtAuthTokenFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();

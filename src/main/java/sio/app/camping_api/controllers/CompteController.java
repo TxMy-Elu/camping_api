@@ -1,11 +1,7 @@
 package sio.app.camping_api.controllers;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sio.app.camping_api.services.CompteService;
-import sio.app.camping_api.services.CreneauxService;
 
 import java.util.List;
 import java.util.Map;
@@ -31,5 +27,12 @@ public class CompteController {
     public List<Map<String, Object>> getCompteBloque() {
         return CompteService.getCompteBloque();
 
+    }
+
+    //renvoie notre role
+    @PostMapping("/role")
+    public Map<String, Object> getRole(@RequestBody Map<String, String> request) {
+        String jwt = (String) request.get("jwt");
+        return CompteService.getRole(jwt);
     }
 }
