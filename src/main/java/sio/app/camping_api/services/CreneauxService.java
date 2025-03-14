@@ -21,11 +21,7 @@ public class CreneauxService {
 
     public List<Map<String, Object>> getAllCreneaux() {
         List<Map<String, Object>> creneauxList = new ArrayList<>();
-        String query = "SELECT * FROM relation1 "
-                + "INNER JOIN compte ON compte.id_compte = relation1.id_compte "
-                + "INNER JOIN creneaux ON creneaux.id_creneaux = relation1.id_creneaux "
-                + "INNER JOIN animation ON animation.id = creneaux.id "
-                + " GROUP BY id_global";
+        String query = "SELECT * FROM creneaux INNER JOIN animation ON animation.id = creneaux.id LEFT JOIN relation1 ON relation1.id_creneaux = creneaux.id_creneaux LEFT JOIN compte ON compte.id_compte = relation1.id_compte GROUP BY id_global; ";
         try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
             while (rs.next()) {
                 Map<String, Object> creneaux = new HashMap<>();
