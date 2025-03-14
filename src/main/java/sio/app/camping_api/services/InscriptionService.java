@@ -1,7 +1,9 @@
 package sio.app.camping_api.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import sio.app.camping_api.secutity.JwtUtils;
 
 import java.io.IOException;
 import java.sql.*;
@@ -37,7 +39,12 @@ public class InscriptionService {
     @Value("${spring.datasource.password}")
     private String databasePassword;
 
-    public void insertInscription(int idCompte, int idCreneaux, Date dateInscription) {
+    @Autowired
+    private JwtUtils jwtUtils;
+
+    public void insertInscription(String jwt, int idCreneaux, Date dateInscription) {
+        String email = jwtUtils.getEmailFromJwtToken(jwt);
+        int idCompte = getIdCompteByEmail(email);
         String query = "SELECT id_global, places_totales, places_prises FROM creneaux WHERE id_creneaux = ?";
         try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setInt(1, idCreneaux);
@@ -88,7 +95,9 @@ public class InscriptionService {
         }
     }
 
-    public void deleteInscription(int idCompte, int idCreneaux) {
+    public void deleteInscription(String jwt, int idCreneaux) {
+        String email = jwtUtils.getEmailFromJwtToken(jwt);
+        int idCompte = getIdCompteByEmail(email);
         String query = "SELECT id_global, places_prises FROM creneaux WHERE id_creneaux = ?";
         try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setInt(1, idCreneaux);
@@ -104,8 +113,12 @@ public class InscriptionService {
                     try (PreparedStatement deletePstmt = conn.prepareStatement(deleteQuery)) {
                         deletePstmt.setInt(1, idCompte);
                         deletePstmt.setInt(2, idCreneaux);
+                        // log la requête
+                        LOGGER.log(Level.INFO, "Deleted from inscription with id_compte: {0}, id_creneaux: {1}", new Object[]{idCompte, idCreneaux});
                         deletePstmt.executeUpdate();
                         LOGGER.log(Level.INFO, "Deleted from inscription");
+                    } catch ( SQLException e) {
+                        LOGGER.log(Level.SEVERE, "SQL Exception", e);
                     }
                     // Check if there is anyone on the waiting list
                     String checkWaitingListQuery = "SELECT COUNT(*) FROM inscription WHERE id_creneaux = ? AND liste_attente = true";
@@ -143,8 +156,7 @@ public class InscriptionService {
     public List<Map<String, Object>> getRegisteredUsers(Long activiteId) {
         List<Map<String, Object>> registeredUsers = new ArrayList<>();
         String query = "SELECT c.id_compte, c.nom, c.prenom, i.estAbs FROM inscription i JOIN compte c ON i.id_compte = c.id_compte WHERE i.id_creneaux = ? AND i.est_valide = true";
-        try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword);
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
+        try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setLong(1, activiteId);
             try (ResultSet rs = pstmt.executeQuery()) {
                 while (rs.next()) {
@@ -161,5 +173,21 @@ public class InscriptionService {
             LOGGER.log(Level.SEVERE, "SQL Exception", e);
         }
         return registeredUsers;
+    }
+
+    private int getIdCompteByEmail(String email) {
+        String query = "SELECT id_compte FROM compte WHERE email = ?";
+        try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, email);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt("id_compte");
+                }
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.SEVERE, "SQL Exception", e);
+        }
+        throw new RuntimeException("User not found");
     }
 }

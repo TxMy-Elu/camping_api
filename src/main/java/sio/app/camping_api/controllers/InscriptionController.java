@@ -18,23 +18,20 @@ public class InscriptionController {
 
     @PostMapping("/insertOrUpdateInscription")
     public void insertOrUpdateInscription(@RequestBody InscriptionRequest inscriptionRequest) {
-        inscriptionService.insertInscription(
-            inscriptionRequest.getInscription().getId_compte(),
-            inscriptionRequest.getCreneaux().getId_creneaux(),
-            inscriptionRequest.getInscription().getDate_inscription()
-        );
+        String jwt = inscriptionRequest.getJwt();
+        inscriptionService.insertInscription(jwt, inscriptionRequest.getCreneaux().getId_creneaux(), inscriptionRequest.getInscription().getDate_inscription());
     }
 
-    @DeleteMapping("/deleteInscription")
-    public void deleteInscription(@RequestBody InscriptionRequest inscriptionRequest) {
-        inscriptionService.deleteInscription(
-            inscriptionRequest.getInscription().getId_compte(),
-            inscriptionRequest.getCreneaux().getId_creneaux()
-        );
-    }
+  @DeleteMapping("/deleteInscription")
+  public void deleteInscription(@RequestBody Map<String, Object> request) {
+      String jwt = (String) request.get("jwt");
+      Map<String, Object> creneaux = (Map<String, Object>) request.get("creneaux");
+      int idCreneaux = (Integer) creneaux.get("id_creneaux");
+      inscriptionService.deleteInscription(jwt, idCreneaux);
+  }
 
     @GetMapping("/getRegisteredUsers/{activiteId}")
-     public List<Map<String, Object>> getRegisteredUsers(@PathVariable Long activiteId) {
+    public List<Map<String, Object>> getRegisteredUsers(@PathVariable Long activiteId) {
         return inscriptionService.getRegisteredUsers(activiteId);
     }
 

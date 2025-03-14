@@ -48,7 +48,7 @@ public class SecurityConfig {
                 .requestMatchers("/creneaux/allCreneaux").hasAnyRole("client", "admin", "animateur")
                 .requestMatchers("/inscription/insertOrUpdateInscription").hasAnyRole("client", "admin", "animateur")
                 .requestMatchers("/inscription/deleteInscription").hasAnyRole("client", "admin", "animateur")
-                .requestMatchers("/inscription/getRegisteredUsers/{activiteId}").hasAnyRole("admin", "animateur")
+                .requestMatchers("/inscription/getRegisteredUsers/{activiteId}").hasAnyRole("admin", "animateur", "client")
                 .requestMatchers("/compte/**").hasRole("client")
                 .anyRequest().authenticated()
             )
