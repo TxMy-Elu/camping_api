@@ -155,7 +155,7 @@ public class InscriptionService {
 
     public List<Map<String, Object>> getRegisteredUsers(Long activiteId) {
         List<Map<String, Object>> registeredUsers = new ArrayList<>();
-        String query = "SELECT c.id_compte, c.nom, c.prenom FROM inscription i JOIN compte c ON i.id_compte = c.id_compte WHERE i.id_creneaux = ? AND i.est_valide = true";
+        String query = "SELECT c.id_compte, c.nom, c.prenom, c.email, i.estAbs FROM inscription i JOIN compte c ON i.id_compte = c.id_compte WHERE i.id_creneaux = ? AND i.est_valide = true";
         try (Connection conn = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword); PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setLong(1, activiteId);
             try (ResultSet rs = pstmt.executeQuery()) {
@@ -164,6 +164,8 @@ public class InscriptionService {
                     user.put("id_compte", rs.getLong("id_compte"));
                     user.put("nom", rs.getString("nom"));
                     user.put("prenom", rs.getString("prenom"));
+                    user.put("email", rs.getString("email"));
+                    user.put("estAbs", rs.getBoolean("estAbs"));    
                     registeredUsers.add(user);
                     LOGGER.log(Level.INFO, "Selected id_compte, nom, prenom, estAbs from inscription with id_creneaux: {0}", activiteId);
                 }
