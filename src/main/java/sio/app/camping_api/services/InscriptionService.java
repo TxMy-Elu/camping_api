@@ -165,7 +165,7 @@ public class InscriptionService {
                     user.put("nom", rs.getString("nom"));
                     user.put("prenom", rs.getString("prenom"));
                     user.put("email", rs.getString("email"));
-                    user.put("estAbs", rs.getBoolean("estAbs"));    
+                    user.put("estAbs", rs.getBoolean("estAbs"));
                     registeredUsers.add(user);
                     LOGGER.log(Level.INFO, "Selected id_compte, nom, prenom, estAbs from inscription with id_creneaux: {0}", activiteId);
                 }

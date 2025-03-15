@@ -40,7 +40,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable) // Désactiver CSRF
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/**").permitAll()
-                        .requestMatchers("/compte/allCompte").hasAnyRole("client", "admin", "client_bloque", "animateur")
+                        .requestMatchers("/compte/allCompte").hasRole("admin")
                         .requestMatchers("/compte/role").permitAll()
                         .requestMatchers("/appel/gererAbsence").hasAnyRole("animateur", "admin")
                         .requestMatchers("/appel/debloquerCompte").hasRole("admin")
